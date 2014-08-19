@@ -2,6 +2,21 @@
 ## Description:
 ##   Creates a matrix object that will cache the inverse matrix when 
 ## it is calculated.
+##
+## Usage :
+## j <- matrix( c(1,2,3,4,5,-5,0,-1,-2),nrow=3)   # prep
+## k <- makeCacheMatrix(j)                        # create it
+## k$get()                                        # retrieve it
+## k$getinv()                                     # returns NULL
+## cacheSolve(k)                                  # returns Inverse
+## k$getinv()                                     # now returns inverse
+## cahceSolve(k)                                  # returns inverse, without calc
+## cacheSolve(k) %*% k$get()                      # close to identity matrix
+##
+## k$set( j %*% j )                               # set matrix to new value
+## k$getinv()                                     # returns NULL
+## cacheSolve(k)                                  # recalc cached inv
+
 
 makeCacheMatrix <- function(x = matrix()) {
     
