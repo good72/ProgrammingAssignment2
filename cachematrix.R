@@ -17,7 +17,6 @@
 ## k$getinv()                                     # returns NULL
 ## cacheSolve(k)                                  # recalc cached inv
 
-
 makeCacheMatrix <- function(x = matrix()) {
     
     mat <- x
