@@ -1,5 +1,3 @@
-## Put comments here that give an overall description of what your
-## functions do
 
 ## Description:
 ##   Creates a matrix object that will cache the inverse matrix when 
@@ -29,7 +27,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve: returns inv of the matrix, using a cached value if
+## cacheSolve: returns inverse of the matrix, using a cached value if
 ## there is one, otherwise calculates it.
 
 cacheSolve <- function(x, ...) {
